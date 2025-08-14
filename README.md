@@ -17,3 +17,9 @@ with dependsOn or similar tools, telling flux to create ressources in a given or
 ### Pihole
 
 - [ ] Figure out sops for flux, to set password and share it with external-dns
+
+### External-dns
+
+This is not active yetm but should be set up later. It was postponed as Bitnami stopped 
+support of their external-dns chart with built-in pihole support, and i need to read
+about the official chart and how to set it up for this purpoose.
