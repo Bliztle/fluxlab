@@ -11,3 +11,9 @@ applying address pool and L2 Announcements. Thus attempting to bootstrap the clu
 in its current state will not work, as the necessary ressources required for 
 IPAddressPool and L2Announcement to be created does not exist. This should be rectified
 with dependsOn or similar tools, telling flux to create ressources in a given order.
+
+- [ ] Use dependsOn
+
+### Pihole
+
+- [ ] Figure out sops for flux, to set password and share it with external-dns
