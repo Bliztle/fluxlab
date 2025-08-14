@@ -18,3 +18,5 @@ spec:
         name: ingress-nginx
         enabled: true
         default: true
+      config:
+        proxy-body-size: 0
