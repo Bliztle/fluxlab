@@ -14,3 +14,11 @@ spec:
         name: longhorn-repo
       version: v1.9.1
   interval: 1m0s
+  values:
+    ingress:
+      enabled: true
+      ingressClassName: ingress-nginx
+      host: longhorn.home
+      path: /
+      pathType: Prefix
+      tls: false
