@@ -20,6 +20,10 @@ spec:
           paths:
             - path: "/"
               pathType: ImplementationSpecific
+        - host: "audiobookshelf.bliztle.com"
+          paths:
+            - path: "/"
+              pathType: ImplementationSpecific
     persistence:
       config:
         storageClass: longhorn-single

@@ -20,6 +20,10 @@ spec:
           paths:
             - path: "/"
               pathType: ImplementationSpecific
+        - host: "jellyfin.bliztle.com"
+          paths:
+            - path: "/"
+              pathType: ImplementationSpecific
     persistence:
       media:
         existingClaim: media-pvc
