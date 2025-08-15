@@ -1,0 +1,7 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: dashboard-kubernetes-repo
+  namespace: dashboard-system
+spec:
+  url: https://kubernetes.github.io/dashboard/

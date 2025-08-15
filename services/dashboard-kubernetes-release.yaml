@@ -1,0 +1,31 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: dashboard-k-release # dashboard-kubernetes-release is too long
+  namespace: dashboard-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: kubernetes-dashboard
+      version: 7.13.0
+      sourceRef:
+        kind: HelmRepository
+        name: dashboard-kubernetes-repo
+  values:
+    app:
+      ingress:
+        enabled: true
+        hosts:
+          - dashboard.home
+        ingressClassName: ingress-nginx
+        tls:
+          enabled: false
+        useDefaultAnnotations: false
+        annotations:
+          nginx.ingress.kubernetes.io/configuration-snippet: | # Surely a more idiomatic solution exists
+            proxy_set_header Authorization $http_authorization;
+    kong:
+      proxy:
+        http:
+          enabled: true
